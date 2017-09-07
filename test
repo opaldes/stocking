@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <form name="form1">
+ <h4>Aufgabe</h4> 
+<input type="text" name="aufgabe" placeholder="Do be do be do" required/>
+  <h4>erledigt bis</h4>
+<input type="date" name="date" required/>  
+    <h4>Kategorie</h4>
+  <select name="kategorie" required>
+    <option>Privat</option>
+    <option>Arbeit</option>
+    <option>Schule</option>
+  </select>
+  <br/><br/>
+ <input type="submit" value="Aufgabe speichern" id="submitButton" />
+  
+  </form>
+    <table>
+    <theader>
+      <tr>
+        <td>Aufgabe</td>        
+        <td>bis</td>
+        <td>Kategorie</td>
+      </tr>
+    </theader>
+    <tbody id="aufgaben"></tbody>
+  </table>
+  <script>var button = document.querySelector('#submitButton');
+
+button.addEventListener('click', function(){
+    var content = {
+      
+    kategorie: document.forms["form1"]["kategorie"].value,
+    console.log(document.forms["form1"]["aufgabe"].value);
+    console.log(document.forms["form1"]["date"].value);
+    };
+    var row = document.createElement('tr');
+    var td  = document.createElement('td');
+})
+
+</script>
+</body>
+</html>
